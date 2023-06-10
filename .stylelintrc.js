@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["stylelint-config-recommended-vue"],
+  extends: ["stylelint-config-standard-vue"],
 
   rules: [],
 };
