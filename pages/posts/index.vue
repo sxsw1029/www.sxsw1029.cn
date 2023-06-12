@@ -7,6 +7,10 @@ const { data: posts } = await useAsyncData("posts", () =>
 );
 
 const { data: settings } = await useSettings();
+
+useHead({
+  title: "Posts",
+});
 </script>
 
 <template>

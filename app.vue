@@ -1,5 +1,15 @@
 <script lang="ts" setup>
 import { colors } from "@unocss/preset-mini";
+
+const { data } = useSettings();
+
+useHead({
+  titleTemplate: (title) => {
+    return title
+      ? `${title} - ${data.value?.siteTitle}`
+      : data.value?.siteTitle;
+  },
+});
 </script>
 
 <template>

@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 const { data } = useSettings();
+
+useHead({
+  title: "Home",
+});
 </script>
 
 <template>
