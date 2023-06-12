@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   modules: ["@unocss/nuxt", "@nuxt/content", "@vueuse/nuxt"],
 
+  plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
+
   css: ["@unocss/reset/tailwind.css", "~/assets/styles/main.css"],
 
   app: {

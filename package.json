@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.53.1",
+    "@vercel/analytics": "^1.0.1",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43"
   }
