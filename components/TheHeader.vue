@@ -4,12 +4,11 @@ const { data } = useSettings();
 
 <template>
   <header class="flex justify-between items-center p-4 lg:px-12 py-6">
-    <NuxtLink
-      to="/"
+    <div
       class="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-500 text-white font-light shadow-md"
     >
       {{ data?.siteTitle }}
-    </NuxtLink>
+    </div>
 
     <nav class="flex items-center">
       <NuxtLink
@@ -30,3 +29,9 @@ const { data } = useSettings();
     </nav>
   </header>
 </template>
+
+<style lang="postcss">
+.router-link-active {
+  @apply opacity-100;
+}
+</style>
