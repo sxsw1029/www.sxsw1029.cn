@@ -10,7 +10,7 @@ const { data: settings } = await useSettings();
 </script>
 
 <template>
-  <main class="px-6 pt-12 w-3xl mx-auto">
+  <main class="px-4 pt-12 w-full lg:w-3/5 mx-auto">
     <p
       class="mb-10 text-gray-400/40 text-center text-3xl font-bold tracking-wide"
     >

@@ -3,7 +3,7 @@ const { data } = useSettings();
 </script>
 
 <template>
-  <main class="flex flex-col justify-center items-center w-full">
+  <main class="flex flex-col justify-center items-center px-4 w-full">
     <div
       class="mx-auto w-32 h-32 border-solid border-2 border-white rounded-full overflow-hidden text-center shadow-lg hover:shadow-2xl transition duration-500"
     >

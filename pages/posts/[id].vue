@@ -9,7 +9,7 @@ const { data: settings } = await useSettings();
 </script>
 
 <template>
-  <main v-if="post" class="px-6 pt-12 w-3xl mx-auto">
+  <main v-if="post" class="px-4 pt-12 w-full lg:w-2/3 mx-auto">
     <div class="mb-16">
       <p class="mb-2 text-2xl font-extrabold font-bold break-words">
         {{ post.title }}
