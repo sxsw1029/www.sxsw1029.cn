@@ -1,6 +1,13 @@
-# Nuxt3 + eslint + prettier + stylelint + commitlint starter template
+<h1 align="center">Sxsw's blog</h1>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<div align="center">
+    <img src="https://img.shields.io/badge/BUILT%20WITH-Nuxt%20Content-nrightgreen?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/BUILT%20WITH-UnoCSS-blue?style=for-the-badge" />
+</div>
+
+<div align="center">
+    <img src="https://img.shields.io/badge/MADE%20WITH-%E2%9D%A4-red?style=for-the-badge" />
+</div>
 
 ## Setup
 
@@ -14,12 +21,12 @@ yarn install
 npm install
 
 # pnpm
-pnpm install
+pnpm install --shamefully-hoist
 ```
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`
+Start the development server on http://localhost:3000
 
 ```bash
 npm run dev
@@ -39,4 +46,4 @@ Locally preview production build:
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

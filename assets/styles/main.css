@@ -1,0 +1,5 @@
+body {
+  @apply font-sans text-gray-700 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200;
+
+  font-feature-settings: "calt" 0;
+}
