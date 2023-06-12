@@ -1,6 +1,6 @@
 ---
 siteTitle: Sxsw's blog
-avatar: https://cdn.v2ex.com/gravatar/2243c217602059ec1739885977df96e7?s=200?d=mp?f=y
+avatar: https://gravatar.loli.net/avatar/2243c217602059ec1739885977df96e7?s=200?d=mp?f=y
 
 description: Hi there, I'm a beginner programmer and currently learning Computer Science.
 location: Jiangsu, China
