@@ -1,5 +1,15 @@
 <script lang="ts" setup>
 const { data } = useSettings();
+
+const switchColorMode = () => {
+  const colorMode = useColorMode();
+
+  const values = ["system", "light", "dark"];
+  const index = values.indexOf(colorMode.preference);
+  const next = (index + 1) % values.length;
+
+  colorMode.preference = values[next];
+};
 </script>
 
 <template>
@@ -23,15 +33,24 @@ const { data } = useSettings();
         >Posts</NuxtLink
       >
 
-      <button class="flex items-center" @click="toggleDark()">
+      <button
+        v-if="!$colorMode.unknown"
+        class="flex items-center"
+        @click="switchColorMode()"
+      >
         <i
-          v-show="!isDark"
-          class="i-ri:sun-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
+          v-show="$colorMode.preference === 'system'"
+          class="i-ri:computer-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
         ></i>
 
         <i
-          v-show="isDark"
+          v-show="$colorMode.preference === 'dark'"
           class="i-ri:moon-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
+        ></i>
+
+        <i
+          v-show="$colorMode.preference === 'light'"
+          class="i-ri:sun-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
         ></i>
       </button>
     </nav>

@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@unocss/nuxt", "@nuxt/content", "@vueuse/nuxt"],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/color-mode",
+    "@unocss/nuxt",
+    "@vueuse/nuxt",
+  ],
 
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
 
@@ -8,6 +13,10 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+  },
+
+  colorMode: {
+    classSuffix: "",
   },
 
   content: {
