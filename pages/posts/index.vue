@@ -2,6 +2,7 @@
 const { data: posts } = await useAsyncData("posts", () =>
   queryContent("/posts")
     .only(["_path", "title", "description", "createdAt", "updatedAt"])
+    .sort({ createdAt: -1 })
     .find()
 );
 
