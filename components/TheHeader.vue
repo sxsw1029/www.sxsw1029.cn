@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-import { useDark, useToggle } from "@vueuse/core";
-
 const { data } = useSettings();
-
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 </script>
 
 <template>
@@ -30,12 +25,12 @@ const toggleDark = useToggle(isDark);
 
       <button class="flex items-center" @click="toggleDark()">
         <i
-          v-if="!isDark"
+          v-show="!isDark"
           class="i-ri:sun-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
         ></i>
 
         <i
-          v-else
+          v-show="isDark"
           class="i-ri:moon-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
         ></i>
       </button>
