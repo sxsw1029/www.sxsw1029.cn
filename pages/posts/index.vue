@@ -20,7 +20,7 @@ const { data: settings } = await useSettings();
     <div
       v-for="post in posts"
       :key="post._path"
-      class="flex flex-col text-center my-8 bg-gray-50 overflow-hidden drop-shadow-sm rounded-[12px]"
+      class="flex flex-col text-center my-8 bg-gray-50 dark:bg-gray-800 overflow-hidden shadow-sm dark:shadow-white/10 rounded-[12px]"
     >
       <NuxtLink
         :to="post._path"
@@ -28,9 +28,13 @@ const { data: settings } = await useSettings();
         >{{ post.title }}</NuxtLink
       >
 
-      <div class="px-6 py-4 opacity-50 bg-gray-100">
-        <p>Updated: {{ formatDate(post.updatedAt, settings?.timeZone) }}</p>
-        <p>Created: {{ formatDate(post.createdAt, settings?.timeZone) }}</p>
+      <div class="px-6 py-4 bg-gray-100 dark:bg-gray-900">
+        <p class="opacity-50">
+          Updated: {{ formatDate(post.updatedAt, settings?.timeZone) }}
+        </p>
+        <p class="opacity-50">
+          Created: {{ formatDate(post.createdAt, settings?.timeZone) }}
+        </p>
       </div>
     </div>
   </main>

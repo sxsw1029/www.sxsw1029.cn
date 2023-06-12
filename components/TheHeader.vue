@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import { useDark, useToggle } from "@vueuse/core";
+
 const { data } = useSettings();
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 </script>
 
 <template>
@@ -10,7 +15,7 @@ const { data } = useSettings();
       {{ data?.siteTitle }}
     </div>
 
-    <nav class="flex items-center">
+    <nav class="flex">
       <NuxtLink
         to="/"
         class="mx-2 opacity-60 hover:opacity-100 transition duration-200"
@@ -23,9 +28,17 @@ const { data } = useSettings();
         >Posts</NuxtLink
       >
 
-      <i
-        class="i-ri:sun-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
-      ></i>
+      <button class="flex items-center" @click="toggleDark()">
+        <i
+          v-if="!isDark"
+          class="i-ri:sun-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
+        ></i>
+
+        <i
+          v-else
+          class="i-ri:moon-line ml-3 opacity-60 hover:opacity-100 transition duration-200"
+        ></i>
+      </button>
     </nav>
   </header>
 </template>

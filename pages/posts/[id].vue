@@ -52,11 +52,11 @@ const { data: settings } = await useSettings();
   }
 
   & code {
-    @apply p-1 bg-gray-200 text-sm font-medium rounded box-decoration-clone;
+    @apply p-1 bg-gray-200 dark:bg-gray-800 text-sm font-medium rounded box-decoration-clone;
   }
 
   & pre {
-    @apply my-6 p-4 bg-gray-200 text-sm font-normal leading-5 rounded overflow-x-auto;
+    @apply my-6 p-4 bg-gray-200 dark:bg-gray-800 text-sm font-normal leading-5 rounded overflow-x-auto;
 
     & code {
       @apply p-0 bg-inherit;
