@@ -9,6 +9,8 @@ const { data } = useSettings();
     <div class="my-px">
       <a
         href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        target="_blank"
+        rel="noopener noreferrer"
         class="underline opacity-60 hover:opacity-100"
         >CC BY-NC-SA 4.0</a
       >
@@ -16,6 +18,28 @@ const { data } = useSettings();
       <span class="opacity-60"
         >&copy; {{ new Date().getFullYear() }} · {{ data?.siteTitle }}</span
       >
+    </div>
+
+    <div v-if="data?.icp_beian" class="my-px">
+      <a
+        :href="data?.icp_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="opacity-60 hover:opacity-100"
+        >{{ data?.icp_code }}</a
+      >
+    </div>
+
+    <div v-if="data?.gongAn_beian" class="my-px">
+      <a
+        :href="data?.gongAn_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex opacity-60 hover:opacity-100"
+      >
+        <img src="/beian.png" class="mr-0.5" />
+        <span>{{ data?.gongAn_code }}</span>
+      </a>
     </div>
 
     <div class="flex items-center my-px">

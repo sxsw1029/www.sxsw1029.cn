@@ -2,7 +2,7 @@
 const { data } = useSettings();
 
 useHead({
-  title: "Home",
+  title: "主页",
 });
 </script>
 
@@ -28,6 +28,11 @@ useHead({
       <hr class="w-5/6" />
 
       <div class="p-8">
+        <div v-if="data?.username" class="flex items-center my-px">
+          <i class="i-ri:user-line mx-2 opacity-60"></i>
+          <span>@{{ data.username }}</span>
+        </div>
+
         <div v-if="data?.location" class="flex items-center my-px">
           <i class="i-ri:map-pin-line mx-2 opacity-60"></i>
           <span>{{ data.location }}</span>

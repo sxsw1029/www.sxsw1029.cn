@@ -38,5 +38,10 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 
-  safelist: ["i-ri:github-line", "i-ri:twitter-line", "i-ri:bilibili-line"],
+  safelist: [
+    "i-ri:github-line",
+    "i-ri:twitter-line",
+    "i-ri:weibo-line",
+    "i-ri:bilibili-line",
+  ],
 });
